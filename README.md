@@ -129,7 +129,7 @@ int main()
 
 				}
 			}
-			if count = 10
+			if count = 10 // counter counts to 10 then once it hits ten the monster age goes up by 1 day and count resets to 0
 			{
 				count = 0;
 				MonAge = MonAge + 1;
