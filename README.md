@@ -5,18 +5,16 @@ using namespace std;
 
 
 char MonName;
-void MonAge();
+int MonAge;
 void MonSave();
 void MonLoad();
 void MonCycle();
 void MonWeight();
-bool MonSleep = false;
-bool MonSick = false; 
 void MonHappy();
 void MonHunger();
 void MonGame();
 void MonTalk()
-void MonsSleep();
+void MonSleep();
 void MonFeed();
 void MonPlay();
 
@@ -24,6 +22,10 @@ void MonPlay();
 
 int main()
 {
+char MonName;
+int MonAge;
+bool MonSleep = false;
+bool MonSick = false; 
 	//counter
 	srand((unsigned)time(0));
 	int random_int;
