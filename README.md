@@ -91,6 +91,13 @@ int main()
 					MonTalk();
 					cout << "You have had a Chat with your Monster " << endl;
 					cout << "Happiness has been Increased " << endl;
+					{
+						random_int = rand() % range) + lowest/RAND_MAX + 1.0);
+						cout << random_int << endl;
+						MonHappy = MonHappy - random_int;
+					}
+
+					cout <<  MonHappy << endl;
 					//talking to monster increases happiness by 1 to 3
 					// two turns have to pass before you can talk again
 					break;
@@ -98,6 +105,18 @@ int main()
 					MonPlay();
 					cout << " You are now playing with your Monster " <<  endl;
 					cout << "Happiness has been Increased " << endl;
+					{
+						random_int = rand() % range) + lowest/RAND_MAX + 1.0);
+						cout << random_int << endl;
+						MonHappy = MonHappy + random_int;
+						MonHunger = MonHunger + 1;
+						MonWeight = MonWeight - 1;
+
+						cout << MonHappy << endl;
+						cout << MonHunger << endl;
+						cout << MonWeight << endl;
+
+					}
 					//Playing with monster increases happiness by 2 to 4, increases hunger by 1 and decreases weight by 1
 					//Three turns have to pass before you can play with monster again
 					break;
@@ -105,6 +124,11 @@ int main()
 					MonFeed();
 					cout << " You are now feeding your Monster " << endl;
 					cout << " Your Pets hunger and happiness have increased " << endl;
+					{
+						random_int = rand() % range) + lowest/RAND_MAX + 1.0);
+						MonHunger = MonHunger - random_int;
+						MonWeight = MonWeight + 2;
+					}
 					//Feeding Monster decreases number of hunger by 3-5, increases weight by 2
 					//Four turns have to pass before you can feed again.
 					break;
@@ -112,6 +136,22 @@ int main()
 					MonSleep();
 					cout << " You have put your Monster to sleep " << endl;
 					cout << " Your Monster is now fast asleep " << endl;
+					
+					MonHappy = MonHappy - 1;
+					MonWeight = MonWeight - 1;
+					MonHunger = MonHunger + 2;
+					
+					if(count = 8)
+					{
+						count = 1;
+						MonAge = MonAge + 1;
+					}
+					else if (count = 9)
+					{
+						count = 2;
+						MonAge = MonAge + 1;
+					}
+				
 					//Monster gets tired after 7 cycles and has to be put to bed within 2 cycles, if not it loses 1-3 both in happiness
 					//Monster sleeps for 3 cycles which happiness and weight decrease by 1 and hunger increases by 2
 					break;
